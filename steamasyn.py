@@ -1,6 +1,4 @@
 import requests
-from bs4 import BeautifulSoup as bs
-import json
 from PIL import Image
 from io import BytesIO
 import re
@@ -61,8 +59,6 @@ for game in items:
 print(len(gamesOrg))
 
 
-#soup = bs(html, 'lxml')
-
 #Makes array of pair datatype game ids and logo url number
 pictureIds = []
 for dit in gamesOrg:
@@ -76,11 +72,6 @@ pictureURLs = []
 for pairs in pictureIds:
     if pairs[1] != "":
         pictureURLs.append('http://media.steampowered.com/steamcommunity/public/images/apps/' + pairs[0].__str__() + '/' + pairs[1].__str__() + '.jpg')
-
-#Write urls to JSON file
-with open('steam.json', 'w', encoding="utf-8") as outfile:
-    #outfile.write(pictures.__str__())
-    outfile.write(pictureURLs.__str__())
 
 for imgUrl in pictureURLs:
     gameCounter = gameCounter + 1
