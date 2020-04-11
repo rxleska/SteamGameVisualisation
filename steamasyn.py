@@ -24,7 +24,6 @@ async def fetch_Image(url, num):
 
 print('ENTER STEAM ID: ')
 steamId = input()
- #Skatan'76561197987808170' #'76561198077968978'  #'76561198048056421'
 steamkey = '2B032F9CF0C84A982A07E363DF1B3D2A'
 
 #Get all steam games of usr steam id
