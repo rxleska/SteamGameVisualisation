@@ -7,7 +7,7 @@ import re
 
 steamId = '76561198077968978' #'76561197987808170' #'76561198048056421' # 
 
-steamkey = '2B032F9CF0C84A982A07E363DF1B3D2A'
+steamkey = ''
 
 #Get all steam games of usr steam id
 url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2B032F9CF0C84A982A07E363DF1B3D2A&steamid=" + steamId + "&format=json&include_appinfo=true"
