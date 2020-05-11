@@ -22,7 +22,7 @@ async def fetch_Image(url, num):
 
 print('ENTER STEAM ID: ')
 steamId = input()
-steamkey = '2B032F9CF0C84A982A07E363DF1B3D2A'
+steamkey = '2AD8713DD20754AEC31CD30A137A6808'
 
 #Get all steam games of usr steam id
 url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=" + steamkey + "&steamid=" + steamId + "&format=json&include_appinfo=true"
