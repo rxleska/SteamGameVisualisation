@@ -78,28 +78,31 @@ for imgUrl in pictureURLs:
     asyncio.run(fetch_Image(imgUrl, gameCounter))
 
 #time.sleep(10)
-
-#find image size needed based around 16/9 aspect ratio
+print("Enter Desired Aspect Ratio in format intxint")
+aspRate = input()
+rS = aspRate.split("x")
+xR = int(rS[0]) / 2.66666
+yR = int(rS[1])
 numOfImages = len(images)
-ratio = math.sqrt(numOfImages/72)
-x = round(6* ratio)
-y = round(9* ratio)
+ratio = math.sqrt(numOfImages/(xR*yR))
+x = math.ceil(xR* ratio)
+y = round(yR* ratio)
 while (x*y) < numOfImages:
     if x < y:
         x = x + 1
     else:
         y = y + 1 
-if x>y:
-    s = y
-    y = x 
-    x = s 
+# if x>y:
+#     s = y
+#     y = x 
+#     x = s 
 print(x.__str__() + " : " + y.__str__())
 
 
 #concatanated the pictures 
 imgsWid = images[0].width
 imgsHei = images[0].height
-print(imgsHei.__str__() + " hxw " + imgsWid.__str__())
+#print(imgsHei.__str__() + " hxw " + imgsWid.__str__())
 totalImage = Image.new('RGB', ( imgsWid* x, imgsHei*y))
 for i in range(numOfImages):
     posY = int(i / x)
