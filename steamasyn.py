@@ -81,7 +81,7 @@ for imgUrl in pictureURLs:
 
 #find image size needed based around 16/9 aspect ratio
 numOfImages = len(images)
-ratio = math.sqrt(numOfImages/72)
+ratio = math.sqrt(numOfImarges/72)
 x = round(6* ratio)
 y = round(9* ratio)
 while (x*y) < numOfImages:
@@ -89,10 +89,6 @@ while (x*y) < numOfImages:
         x = x + 1
     else:
         y = y + 1 
-if x>y:
-    s = y
-    y = x 
-    x = s 
 print(x.__str__() + " : " + y.__str__())
 
 

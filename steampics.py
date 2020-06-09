@@ -68,10 +68,6 @@ while (x*y) < numOfImages:
         x = x + 1
     else:
         y = y + 1 
-if x<y:
-    s = y
-    y = x 
-    x = s 
 print(x.__str__() + " : " + y.__str__())
 
 #concatanated the pictures 
