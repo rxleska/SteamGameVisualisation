@@ -7,4 +7,4 @@ The steamAsyn program is the faster of the two basic programs, enter your vanity
 
 The program steamAsp will ask your id then after fetching images it will ask you your desired aspect ratio, enter it in integerxinteger form like 16x9 or 4x3 or 16x10.
 
-The program steampics is a slower version of steam asyn that doesn't process the request with pythons asyn library.
+The program steampics no longer works and was a slower version of steam asyn that doesn't process the request with pythons asyn library.
